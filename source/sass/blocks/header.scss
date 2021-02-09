@@ -1,0 +1,28 @@
+.header {
+  display: block;
+}
+
+.header__list {
+  list-style: none;
+  margin: 0;
+  margin-left: auto;
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+}
+
+.header__link {
+  position: relative;
+  font-family: $font-family--neue-machina;
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 500;
+  color: #0B0B0B;
+
+  & svg {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+  }
+}

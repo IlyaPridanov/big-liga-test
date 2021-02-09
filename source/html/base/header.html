@@ -1,0 +1,29 @@
+<header class="header @@if (context.mod) { header--@@mod }">
+  <div class="header__wrapper">
+    <a class="header__logo" @@if (!context.main) { href="index.html"} aria-label="Переход на главную">
+    </a>
+    <nav class="header__nav">
+      <ul class="header__list">
+        <li class="header__item"><a href="#" class="header__link">О нас</a></li>
+        <li class="header__item"><a href="#" class="header__link">Цены</a></li>
+        <li class="header__item"><a href="#" class="header__link">Критерии качества</a></li>
+        <li class="header__item">
+          <a href="#" class="header__link">
+            Тестирование
+            <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M6.38304 0.621307L6.38304 5.36395H5.38304V2.32841L1.28685 6.42461L0.579742 5.7175L4.67594 1.62131L1.6404 1.62131L1.6404 0.621308L6.38304 0.621307Z" fill="#2C39F2"/>
+            </svg>
+          </a>
+        </li>
+        <li class="header__item">
+          <a href="#" class="header__link">
+            Блог
+            <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M6.38304 0.621307L6.38304 5.36395H5.38304V2.32841L1.28685 6.42461L0.579742 5.7175L4.67594 1.62131L1.6404 1.62131L1.6404 0.621308L6.38304 0.621307Z" fill="#2C39F2"/>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
