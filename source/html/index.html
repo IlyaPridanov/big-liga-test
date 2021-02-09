@@ -15,8 +15,30 @@
   <div class="wrapper">
     @@include("source/html/base/header.html")
 
-    <main>
-      <div class="container">
+    <main class="main">
+      <div class="container main__container">
+        <div class="main__loader active">
+          <div class="main__loader-logo">
+            <img src="img/svg/big-logo.svg" alt="big-logo">
+          </div>
+          <p class="main__loader-text">Нажмите на Enter</p>
+        </div>
+        <div class="main__grid">
+          <h1 class="main__caption">
+            Вёрстка
+            и фронтенд
+            любой сложности
+          </h1>
+          <div class="main__right-column">
+            <div class="main__right-logo">
+              @@include("source/html/base/right-logo.html")
+            </div>
+            <div class="main__text">
+              для digital‑агентств, продуктовых компаний
+              и фриланс‑команд
+            </div>
+          </div>
+        </div>
       </div>
     </main>
 
