@@ -15,8 +15,8 @@
   justify-content: center;
   flex-direction: column;
   position: absolute;
-  z-index: 5;
-  left: -1000px;
+  z-index: 100;
+  left: -120vw;
   top: 0;
   width: 100%;
   min-height: 100vh;
@@ -95,4 +95,56 @@
 
 .main__right-logo {
   margin-bottom: 35px;
+}
+
+@include viewport--md {
+  .main__logo-white {
+    fill: #FFFFFF;
+  }
+
+  .main__caption {
+    margin-left: 35px;
+  }
+
+  .main__loader-logo {
+    width: 550px;
+    height: 70px;
+  }
+
+  .main__grid {
+    display: flex;
+    align-items: center;
+
+    position: relative;
+
+    width: 100%;
+    min-height: 100vh;
+  }
+
+  .main__text {
+    color: #FFFFFF;
+  }
+
+  .main__right-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    z-index: 20;
+    right: -120vw;
+    top: 0;
+    width: 100%;
+    min-height: 100vh;
+
+    background-color: #2C39F2;
+
+    transition: all 0.5s ease-in;
+
+    &.active {
+      right: 0;
+
+      transition: all 0.5s ease-in;
+    }
+  }
 }
