@@ -597,6 +597,7 @@ button,
 
 .header {
   position: absolute;
+  z-index: 5;
   left: 0;
   top: 0;
   display: block;
