@@ -21,7 +21,7 @@
   width: 100%;
   min-height: 100vh;
 
-  background-color: #fff;
+  background-color: $color-default-white;
 
   transition: left 0.5s ease-in;
   transition-property: left;
@@ -41,7 +41,7 @@
   height: 100px;
   overflow: hidden;
 
-  & img {
+  & svg {
     position: absolute;
     left: 0;
 
@@ -51,7 +51,7 @@
     bottom: -200px;
   }
 
-  &.active img {
+  &.active svg {
     bottom: 0;
     transition: bottom 3s ease-in-out;
     transition-property: bottom;
@@ -62,11 +62,10 @@
   margin: 0;
   margin-bottom: 100px;
 
-  font-family: $font-family--neue-machina;
   font-size: 24px;
   line-height: 1;
   font-weight: 400;
-  color: #000000;
+  color: $color-default-black;
 }
 
 .main__grid {
@@ -81,11 +80,10 @@
 .main__caption {
   margin: 0;
 
-  font-family: $font-family--neue-machina;
   font-size: 96px;
   line-height: 1;
   font-weight: 400;
-  color: #2C39F2;
+  color: $color-neon-blue;
 }
 
 .main__text {
@@ -93,11 +91,10 @@
   width: 352px;
   max-width: 100%;
 
-  font-family: $font-family--neue-machina;
   font-size: 30px;
   line-height: 1;
   font-weight: 400;
-  color: #000000;
+  color: $color-default-black;
 }
 
 .main__right-logo {
@@ -129,7 +126,7 @@
   }
 
   .main__text {
-    color: #FFFFFF;
+    color: $color-default-white;
   }
 
   .main__right-column {
@@ -144,7 +141,7 @@
     width: 100%;
     min-height: 100vh;
 
-    background-color: #2C39F2;
+    background-color: $color-neon-blue;
 
     transition: right 0.5s ease-in;
     transition-property: right;

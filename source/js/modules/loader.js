@@ -20,17 +20,36 @@ const clickLoader = () => {
     }
   });
 
-  if (window.matchMedia('(max-width: 1023px)').matches) {
-    grid.addEventListener('click', () => {
-      right.classList.toggle('active');
-    });
+  const mobileDo = function () {
+    if (window.matchMedia('(max-width: 1023px)').matches) {
+      if (flag) {
+        loader.addEventListener('click', () => {
+          loader.classList.remove('active');
+          flag = !flag;
+        });
+      }
 
-    btn.addEventListener('click', () => {
-      nav.classList.toggle('active');
-      btn.classList.toggle('js-btn-active');
-      body.classList.toggle('hidden');
-    });
-  }
+      grid.addEventListener('click', () => {
+        right.classList.toggle('active');
+      });
+
+      btn.addEventListener('click', () => {
+        nav.classList.toggle('active');
+        btn.classList.toggle('js-btn-active');
+        body.classList.toggle('hidden');
+      });
+    }
+  };
+
+  mobileDo();
+
+  window.addEventListener('orientationchange', function () {
+    mobileDo();
+  }, false);
+
+  document.addEventListener('fullscreenchange', function () {
+    mobileDo();
+  });
 
 };
 

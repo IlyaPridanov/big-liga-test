@@ -10,7 +10,7 @@
   padding: 0;
   width: 30px;
   height: 4px;
-  background-color: #2C39F2;
+  background-color: $color-neon-blue;
   display: block;
   border-radius: 4px;
   position: absolute;
@@ -63,7 +63,7 @@
   .hamburger__bar--bar3 {
     transform: rotate(45deg) translateY(-50%);
     height: 3px;
-    background-color: transparent !important;
+    background-color: $color-transparent !important;
 
     transition-property: height , transform(rotate);
     transition-duration: 0.4s;
@@ -73,7 +73,7 @@
   .hamburger__bar--bar2 {
     transform: rotate(-45deg) translateY(-50%);
     height: 3px;
-    background-color: transparent !important;
+    background-color: $color-transparent !important;
 
     transition-property: height , transform(rotate);
     transition-duration: 0.4s;

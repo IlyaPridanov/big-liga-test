@@ -2,7 +2,7 @@
   <div class="container">
     <div class="header__wrapper">
       <a class="header__logo" @@if (!context.main) { href="index.html"} aria-label="Переход на главную">
-        <img src="img/svg/min-logo.svg" alt="logo-min">
+        @@include("source/html/base/min-logo.html")
       </a>
       <nav class="header__nav">
         <ul class="header__list">
