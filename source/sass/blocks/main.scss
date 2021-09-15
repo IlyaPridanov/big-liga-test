@@ -23,12 +23,14 @@
 
   background-color: #fff;
 
-  transition: all 0.5s ease-in;
+  transition: left 0.5s ease-in;
+  transition-property: left;
 
   &.active {
     left: 0;
 
-    transition: all 0.5s ease-in;
+    transition: left 0.5s ease-in;
+    transition-property: left;
   }
 }
 
@@ -46,8 +48,13 @@
     width: 100%;
     height: auto;
 
-    animation-duration: 3s;
-    animation-name: big-logo;
+    bottom: -200px;
+  }
+
+  &.active img {
+    bottom: 0;
+    transition: bottom 3s ease-in-out;
+    transition-property: bottom;
   }
 }
 
@@ -139,12 +146,14 @@
 
     background-color: #2C39F2;
 
-    transition: all 0.5s ease-in;
+    transition: right 0.5s ease-in;
+    transition-property: right;
 
     &.active {
       right: 0;
 
-      transition: all 0.5s ease-in;
+      transition: right 0.5s ease-in;
+      transition-property: right;
     }
   }
 }

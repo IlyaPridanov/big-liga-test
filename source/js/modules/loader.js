@@ -1,4 +1,5 @@
 const loader = document.querySelector('.main__loader');
+const logo = document.querySelector('.main__loader-logo');
 const grid = document.querySelector('.main__grid');
 const right = document.querySelector('.main__right-column');
 const nav = document.querySelector('nav');
@@ -6,6 +7,10 @@ const btn = document.querySelector('.hamburger');
 const body = document.querySelector('body');
 
 let flag = true;
+
+window.addEventListener('load', () => {
+  logo.classList.add('active');
+});
 
 const clickLoader = () => {
   window.addEventListener('keydown', (evt) => {

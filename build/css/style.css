@@ -547,20 +547,32 @@ button,
   background-color: #2C39F2;
   display: block;
   border-radius: 4px;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
   position: absolute; }
 
 .hamburger__bar--bar1 {
   top: 0;
   -webkit-transform-origin: 5%;
-          transform-origin: 5%; }
+          transform-origin: 5%;
+  -webkit-transition-property: height, width, transform(rotate), transform(rotate);
+  transition-property: height, width, transform(rotate), transform(rotate);
+  transition-property: height, width, transform(rotate);
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out; }
 
 .hamburger__bar--bar2,
 .hamburger__bar--bar3 {
   top: 50%;
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%); }
+          transform: translateY(-50%);
+  -webkit-transition-property: height, transform(rotate), transform(rotate);
+  transition-property: height, transform(rotate), transform(rotate);
+  transition-property: height, transform(rotate);
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out; }
 
 .hamburger__bar--bar3 {
   right: 0; }
@@ -568,7 +580,14 @@ button,
 .hamburger__bar--bar4 {
   bottom: 0;
   -webkit-transform-origin: 5%;
-          transform-origin: 5%; }
+          transform-origin: 5%;
+  -webkit-transition-property: width, height, transform(rotate), transform(rotate);
+  transition-property: width, height, transform(rotate), transform(rotate);
+  transition-property: width, height, transform(rotate);
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out; }
 
 /* Стили для активной кнопки*/
 .js-btn-active {
@@ -578,22 +597,50 @@ button,
     -webkit-transform: rotate(45deg);
             transform: rotate(45deg);
     height: 3px;
-    width: 42px; }
+    width: 42px;
+    -webkit-transition-property: height, width, transform(rotate), transform(rotate);
+    transition-property: height, width, transform(rotate), transform(rotate);
+    transition-property: height, width, transform(rotate);
+    -webkit-transition-duration: 0.4s;
+            transition-duration: 0.4s;
+    -webkit-transition-timing-function: ease-in-out;
+            transition-timing-function: ease-in-out; }
   .js-btn-active .hamburger__bar--bar3 {
     -webkit-transform: rotate(45deg) translateY(-50%);
             transform: rotate(45deg) translateY(-50%);
     height: 3px;
-    background-color: transparent !important; }
+    background-color: transparent !important;
+    -webkit-transition-property: height, transform(rotate), transform(rotate);
+    transition-property: height, transform(rotate), transform(rotate);
+    transition-property: height, transform(rotate);
+    -webkit-transition-duration: 0.4s;
+            transition-duration: 0.4s;
+    -webkit-transition-timing-function: ease-in-out;
+            transition-timing-function: ease-in-out; }
   .js-btn-active .hamburger__bar--bar2 {
     -webkit-transform: rotate(-45deg) translateY(-50%);
             transform: rotate(-45deg) translateY(-50%);
     height: 3px;
-    background-color: transparent !important; }
+    background-color: transparent !important;
+    -webkit-transition-property: height, transform(rotate), transform(rotate);
+    transition-property: height, transform(rotate), transform(rotate);
+    transition-property: height, transform(rotate);
+    -webkit-transition-duration: 0.4s;
+            transition-duration: 0.4s;
+    -webkit-transition-timing-function: ease-in-out;
+            transition-timing-function: ease-in-out; }
   .js-btn-active .hamburger__bar--bar4 {
     -webkit-transform: rotate(-45deg);
             transform: rotate(-45deg);
     height: 3px;
-    width: 42px; }
+    width: 42px;
+    -webkit-transition-property: width, height, transform(rotate), transform(rotate);
+    transition-property: width, height, transform(rotate), transform(rotate);
+    transition-property: width, height, transform(rotate);
+    -webkit-transition-duration: 0.4s;
+            transition-duration: 0.4s;
+    -webkit-transition-timing-function: ease-in-out;
+            transition-timing-function: ease-in-out; }
 
 .header {
   position: absolute;
@@ -754,12 +801,16 @@ button,
   width: 100%;
   min-height: 100vh;
   background-color: #fff;
-  -webkit-transition: all 0.5s ease-in;
-  transition: all 0.5s ease-in; }
+  -webkit-transition: left 0.5s ease-in;
+  transition: left 0.5s ease-in;
+  -webkit-transition-property: left;
+  transition-property: left; }
   .main__loader.active {
     left: 0;
-    -webkit-transition: all 0.5s ease-in;
-    transition: all 0.5s ease-in; }
+    -webkit-transition: left 0.5s ease-in;
+    transition: left 0.5s ease-in;
+    -webkit-transition-property: left;
+    transition-property: left; }
 
 .main__loader-logo {
   margin: auto;
@@ -772,10 +823,13 @@ button,
     left: 0;
     width: 100%;
     height: auto;
-    -webkit-animation-duration: 3s;
-            animation-duration: 3s;
-    -webkit-animation-name: big-logo;
-            animation-name: big-logo; }
+    bottom: -200px; }
+  .main__loader-logo.active img {
+    bottom: 0;
+    -webkit-transition: bottom 3s ease-in-out;
+    transition: bottom 3s ease-in-out;
+    -webkit-transition-property: bottom;
+    transition-property: bottom; }
 
 .main__loader-text {
   margin: 0;
@@ -859,24 +913,16 @@ button,
     width: 100%;
     min-height: 100vh;
     background-color: #2C39F2;
-    -webkit-transition: all 0.5s ease-in;
-    transition: all 0.5s ease-in; }
+    -webkit-transition: right 0.5s ease-in;
+    transition: right 0.5s ease-in;
+    -webkit-transition-property: right;
+    transition-property: right; }
     .main__right-column.active {
       right: 0;
-      -webkit-transition: all 0.5s ease-in;
-      transition: all 0.5s ease-in; } }
-
-@-webkit-keyframes big-logo {
-  from {
-    bottom: -200px; }
-  to {
-    bottom: 0; } }
-
-@keyframes big-logo {
-  from {
-    bottom: -200px; }
-  to {
-    bottom: 0; } }
+      -webkit-transition: right 0.5s ease-in;
+      transition: right 0.5s ease-in;
+      -webkit-transition-property: right;
+      transition-property: right; } }
 
 /* @media (hover: hover), screen and (min-width: 0\0) {
   &:hover,

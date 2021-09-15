@@ -13,19 +13,25 @@
   background-color: #2C39F2;
   display: block;
   border-radius: 4px;
-  transition: all 0.4s ease-in-out;
   position: absolute;
 }
 
 .hamburger__bar--bar1 {
   top: 0;
   transform-origin: 5%;
+  transition-property: height , width, transform(rotate);
+  transition-duration: 0.4s;
+  transition-timing-function: ease-in-out;
 }
 
 .hamburger__bar--bar2,
 .hamburger__bar--bar3 {
   top: 50%;
   transform: translateY(-50%);
+
+  transition-property: height , transform(rotate);
+  transition-duration: 0.4s;
+  transition-timing-function: ease-in-out;
 }
 
 .hamburger__bar--bar3 {
@@ -35,6 +41,10 @@
 .hamburger__bar--bar4 {
   bottom: 0;
   transform-origin: 5%;
+
+  transition-property: width, height , transform(rotate);
+  transition-duration: 0.4s;
+  transition-timing-function: ease-in-out;
 }
 /* Стили для активной кнопки*/
 
@@ -45,23 +55,38 @@
     transform: rotate(45deg);
     height: 3px;
     width: 42px;
+    transition-property: height , width, transform(rotate);
+    transition-duration: 0.4s;
+    transition-timing-function: ease-in-out;
   }
 
   .hamburger__bar--bar3 {
     transform: rotate(45deg) translateY(-50%);
     height: 3px;
     background-color: transparent !important;
+
+    transition-property: height , transform(rotate);
+    transition-duration: 0.4s;
+    transition-timing-function: ease-in-out;
   }
 
   .hamburger__bar--bar2 {
     transform: rotate(-45deg) translateY(-50%);
     height: 3px;
     background-color: transparent !important;
+
+    transition-property: height , transform(rotate);
+    transition-duration: 0.4s;
+    transition-timing-function: ease-in-out;
   }
 
   .hamburger__bar--bar4 {
     transform: rotate(-45deg);
     height: 3px;
     width: 42px;
+
+    transition-property: width, height , transform(rotate);
+    transition-duration: 0.4s;
+    transition-timing-function: ease-in-out;
   }
 }
