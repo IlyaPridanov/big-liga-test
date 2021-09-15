@@ -47,9 +47,13 @@ const clickLoader = () => {
     mobileDo();
   }, false);
 
-  document.addEventListener('fullscreenchange', function () {
+  if (!document.fullscreenElement) {
     mobileDo();
-  });
+  } else {
+    if (document.exitFullscreen) {
+      mobileDo();
+    }
+  }
 
 };
 
